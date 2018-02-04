@@ -1,0 +1,18 @@
+{
+  "name": "quicktype-custom",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "scripts": {
+    "start": "ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^8.0.58",
+    "ts-node": "^4.0.1",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "quicktype": "quicktype/quicktype#custom-target-languages"
+  }
+}
