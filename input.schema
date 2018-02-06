@@ -4,7 +4,7 @@
         "List": {
             "type": "object",
             "properties": {
-                "next": {
+                "next_node": {
                     "$ref": "#/definitions/List"
                 }
             },

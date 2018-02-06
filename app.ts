@@ -6,8 +6,8 @@ import { Run, Options } from "quicktype";
 import { JavaTargetLanguage, JavaRenderer } from "quicktype/dist/Language/Java"
 import { TypeGraph } from "quicktype/dist/TypeGraph";
 import { ConvenienceRenderer } from "quicktype/dist/ConvenienceRenderer";
-import { ClassType } from "quicktype/dist/Type";
-import { Name } from "quicktype/dist/Naming";
+import { ClassType, ClassProperty } from "quicktype/dist/Type";
+import { Name, FixedName } from "quicktype/dist/Naming";
 
 class CustomJavaTargetLanguage extends JavaTargetLanguage {
     protected get rendererClass(): new (
@@ -20,13 +20,18 @@ class CustomJavaTargetLanguage extends JavaTargetLanguage {
 }
 
 class CustomJavaRenderer extends JavaRenderer {
-    constructor(
-        graph: TypeGraph,
-        leadingComments: string[] | undefined,
-        private readonly packageName: string,
-        private readonly justTypes: boolean
-    ) {
-        super(graph, leadingComments, packageName, justTypes);
+    protected nameForProperty(_c: ClassType, _className: Name, _p: ClassProperty, jsonName: string): Name {
+        return new FixedName(jsonName);
+    }
+
+    protected getterAndSetterNamesForProperty(
+        _c: ClassType,
+        _className: Name,
+        _p: ClassProperty,
+        jsonName: string,
+        _name: Name
+    ): [Name, Name] {
+        return [new FixedName(`get_${jsonName}`), new FixedName(`set_${jsonName}`)];
     }
 
     protected emitClassAttributes(c: ClassType, className: Name): void {
