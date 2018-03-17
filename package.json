@@ -13,6 +13,6 @@
     "typescript": "^2.6.2"
   },
   "dependencies": {
-    "quicktype": "quicktype/quicktype#custom-target-languages"
+    "quicktype": "quicktype/quicktype"
   }
 }
