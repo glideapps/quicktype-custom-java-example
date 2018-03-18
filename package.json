@@ -1,9 +1,11 @@
 {
   "name": "quicktype-custom",
-  "version": "1.0.0",
-  "main": "app.ts",
+  "version": "1.0.1",
+  "main": "dist/app.js",
+  "bin": "dist/app.js",
   "scripts": {
     "start": "ts-node app.ts",
+    "prepack": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "Apache-2.0",
@@ -14,5 +16,10 @@
   },
   "dependencies": {
     "quicktype": "quicktype/quicktype"
-  }
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "dist/**"
+  ]
 }
