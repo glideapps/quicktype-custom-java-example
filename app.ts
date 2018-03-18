@@ -61,7 +61,7 @@ async function main(args: string[]) {
 
     const cliOptions = parseCLIOptions(args, lang);
 
-    const quicktypeOptions = await makeQuicktypeOptions(cliOptions);
+    const quicktypeOptions = await makeQuicktypeOptions(cliOptions, [lang]);
     if (quicktypeOptions === undefined) return;
 
     quicktypeOptions.lang = lang;

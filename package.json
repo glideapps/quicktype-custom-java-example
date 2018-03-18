@@ -3,6 +3,8 @@
   "version": "1.0.1",
   "main": "dist/app.js",
   "bin": "dist/app.js",
+  "homepage": "https://github.com/quicktype/quicktype-custom-java-example",
+  "repository": "https://github.com/quicktype/quicktype-custom-java-example.git",
   "scripts": {
     "start": "ts-node app.ts",
     "prepack": "tsc",
