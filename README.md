@@ -1,4 +1,4 @@
-This is an example of how to extend [quicktype](https://github.com/quicktype/quicktype) via its API.
+This is a minimal TypeScript project with Node.
 
 ## Installing dependencies
 
@@ -9,5 +9,5 @@ npm install
 ## Running
 
 ```sh
-npm start -- /path/to/my.json
+npm start
 ```

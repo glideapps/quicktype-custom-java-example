@@ -1,12 +1,10 @@
 {
-  "name": "quicktype-custom",
-  "version": "1.0.1",
-  "main": "dist/app.js",
-  "bin": "dist/app.js",
-  "homepage": "https://github.com/quicktype/quicktype-custom-java-example",
-  "repository": "https://github.com/quicktype/quicktype-custom-java-example.git",
+  "name": "typescript-node-minimal",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
   "scripts": {
-    "start": "ts-node app.ts",
+    "start": "ts-node index.ts",
     "prepack": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,9 +14,7 @@
     "ts-node": "^4.0.1",
     "typescript": "^2.6.2"
   },
-  "dependencies": {
-    "quicktype": "quicktype/quicktype"
-  },
+  "dependencies": {},
   "files": [
     "package.json",
     "README.md",
